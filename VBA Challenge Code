@@ -102,7 +102,7 @@ Dim WS As Worksheet
             End If
         Next j
         
-'greatest%increase greatest%decrease and greatest total volume fields
+'Greatest%increase Greatest%decrease and Greatest total volume
 lastrow = Cells(Rows.Count, "I").End(xlUp).Row
 GreatestIncrease = 0
 GreatestIncreaseTicker = ""
@@ -131,7 +131,7 @@ Range("P3").Value = GreatestDecreaseTicker
 Range("Q4").Value = GreatestVolume
 Range("P4").Value = GreatestVolumeTicker
 
-'use conditional formatting to highlight Yearly Changes (positive and negative changes)
+'Highlight Yearly Changes (positive and negative changes)
 For i = 2 To lastrow
 If Cells(i, "J").Value > 0 Then
 Cells(i, "J").Interior.ColorIndex = 4
@@ -140,8 +140,7 @@ Cells(i, "J").Interior.ColorIndex = 3
 End If
 Next i
 
-Columns("A:P").AutoFit
-'run on every worksheet at once
+
 Next WS
 
 End Sub
